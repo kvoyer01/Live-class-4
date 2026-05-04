@@ -4,6 +4,340 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ==========================================================================
+   WISE UI DESIGN TOKENS
+   Primitive colors, semantic tokens (light/dark), and dimensions
+   ========================================================================== */
+
+:root {
+  /* PRIMITIVE COLORS */
+  --color-gray-50: #FFFFFF;
+  --color-gray-100: #F6F7F4;
+  --color-gray-200: #ECEDE8;
+  --color-gray-300: #D7D8D2;
+  --color-gray-400: #B7B9B4;
+  --color-gray-500: #8A8D88;
+  --color-gray-600: #5A5E58;
+  --color-gray-650: #464745;
+  --color-gray-700: #2F322D;
+  --color-gray-800: #161815;
+  --color-gray-900: #0B0C0A;
+
+  --color-bright-green-100: #D6F9CE;
+  --color-bright-green-200: #C0F4B6;
+  --color-bright-green-300: #ADEF9D;
+  --color-bright-green-400: #ACFF98;
+  --color-bright-green-450: #B3EC8F;
+  --color-bright-green-500: #9EE770;
+  --color-bright-green-600: #81E143;
+  --color-bright-green-700: #66CF21;
+  --color-bright-green-750: #8DCE64;
+  --color-bright-green-800: #00B800;
+  --color-bright-green-900: #008F00;
+
+  --color-forest-green-100: #E7FBDB;
+  --color-forest-green-200: #DCE6D9;
+  --color-forest-green-300: #B8D6BA;
+  --color-forest-green-400: #2D6601;
+  --color-forest-green-500: #224D00;
+  --color-forest-green-600: #163300;
+  --color-forest-green-700: #002A00;
+  --color-forest-green-800: #083400;
+  --color-forest-green-900: #0F2400;
+
+  --color-red-100: #FAE9EA;
+  --color-red-200: #FFD1D3;
+  --color-red-300: #FFBDBF;
+  --color-red-400: #FFA8AE;
+  --color-red-500: #CB2730;
+  --color-red-600: #B7232C;
+  --color-red-700: #A82127;
+  --color-red-800: #70151A;
+
+  --color-yellow-100: #FFF7CC;
+  --color-yellow-300: #FFE866;
+  --color-yellow-500: #FFD400;
+  --color-yellow-700: #B39200;
+  --color-yellow-900: #4A3D00;
+
+  --color-overlay-100: rgba(0, 0, 0, 0.05);
+  --color-overlay-300: rgba(0, 0, 0, 0.15);
+  --color-overlay-500: rgba(0, 0, 0, 0.30);
+  --color-overlay-700: rgba(0, 0, 0, 0.45);
+  --color-overlay-900: rgba(0, 0, 0, 0.60);
+
+  --color-shadow-100: rgba(11, 12, 10, 0.02);
+  --color-shadow-200: rgba(11, 12, 10, 0.04);
+  --color-shadow-300: rgba(11, 12, 10, 0.06);
+  --color-shadow-400: rgba(11, 12, 10, 0.08);
+  --color-shadow-500: rgba(11, 12, 10, 0.10);
+  --color-shadow-600: rgba(11, 12, 10, 0.12);
+  --color-shadow-700: rgba(11, 12, 10, 0.16);
+
+  /* LIGHT MODE SEMANTIC COLORS */
+  --semantic-bg-neutral-bold-default: #ECEDE8;
+  --semantic-bg-neutral-bold-hovered: #D7D8D2;
+  --semantic-bg-neutral-bold-pressed: #B7B9B4;
+  --semantic-bg-neutral-bold-disabled: #ECEDE8;
+
+  --semantic-bg-neutral-subtle-default: #F6F7F4;
+  --semantic-bg-neutral-subtle-hovered: #ECEDE8;
+  --semantic-bg-neutral-subtle-pressed: #D7D8D2;
+  --semantic-bg-neutral-subtle-disabled: #ECEDE8;
+
+  --semantic-bg-neutral-subtlest-default: #F6F7F4;
+  --semantic-bg-neutral-subtlest-hovered: #F6F7F4;
+  --semantic-bg-neutral-subtlest-pressed: #ECEDE8;
+  --semantic-bg-neutral-subtlest-disabled: #F6F7F4;
+
+  --semantic-bg-neutral-screen: #FFFFFF;
+  --semantic-bg-neutral-elevated: #FFFFFF;
+  --semantic-bg-neutral-floating: #FFFFFF;
+  --semantic-bg-neutral-control: #FFFFFF;
+
+  --semantic-bg-brand-bold-default: #9EE770;
+  --semantic-bg-brand-bold-hovered: #81E143;
+  --semantic-bg-brand-bold-pressed: #66CF21;
+  --semantic-bg-brand-bold-disabled: #ECEDE8;
+
+  --semantic-bg-brand-subtle-default: #D6F9CE;
+  --semantic-bg-brand-subtle-hovered: #C0F4B6;
+  --semantic-bg-brand-subtle-pressed: #ADEF9D;
+  --semantic-bg-brand-subtle-disabled: #F6F7F4;
+
+  --semantic-bg-danger-subtle-default: #FAE9EA;
+  --semantic-bg-danger-warning-bold-default: #CB2730;
+  --semantic-bg-danger-warning-bold-hover: #B7232C;
+  --semantic-bg-danger-warning-bold-pressed: #A82127;
+
+  --semantic-bg-inverse-bold: #0B0C0A;
+
+  --semantic-text-neutral-bold-default: #0B0C0A;
+  --semantic-text-neutral-subtle-default: #5A5E58;
+  --semantic-text-neutral-subtlest-default: #8A8D88;
+  --semantic-text-disabled: #B7B9B4;
+
+  --semantic-text-brand-bold-default: #163300;
+  --semantic-text-success-bold-default: #163300;
+  --semantic-text-warning-bold-default: #B39200;
+  --semantic-text-danger-bold-default: #CB2730;
+  --semantic-text-danger-bold-disabled: #FFA8AE;
+
+  --semantic-text-inverse-bold: #FFFFFF;
+
+  --semantic-icon-neutral-bold-default: #0B0C0A;
+  --semantic-icon-neutral-subtle-default: #5A5E58;
+  --semantic-icon-neutral-disabled: #B7B9B4;
+
+  --semantic-icon-brand-bold-default: #163300;
+  --semantic-icon-danger-bold-default: #CB2730;
+  --semantic-icon-danger-bold-disabled: #FFA8AE;
+  --semantic-icon-danger-subtle: #FAE9EA;
+
+  --semantic-icon-inverse-bold: #FFFFFF;
+
+  --semantic-border-neutral-bold-default: #8A8D88;
+  --semantic-border-neutral-bold-hover: #5A5E58;
+  --semantic-border-neutral-subtle-default: #D7D8D2;
+  --semantic-border-neutral-subtle-hovered: #B7B9B4;
+  --semantic-border-neutral-subtle-disabled: #ECEDE8;
+
+  --semantic-border-brand-subtle: #8DCE64;
+  --semantic-border-brand-bold: #163300;
+
+  --semantic-border-danger-bold: #CB2730;
+  --semantic-border-danger-bold-disabled: #FFA8AE;
+
+  --semantic-border-inverse: #FFFFFF;
+
+  --semantic-link-brand-bold-default: #163300;
+  --semantic-link-brand-bold-hovered: #002A00;
+  --semantic-link-brand-bold-visited: #083400;
+
+  --semantic-focus-brand-bold: #163300;
+
+  --semantic-overlay-neutral-bold: rgba(0, 0, 0, 0.45);
+  --semantic-overlay-neutral-subtle: rgba(0, 0, 0, 0.15);
+
+  --semantic-selection-neutral-subtle: rgba(0, 0, 0, 0.05);
+  --semantic-selection-brand-subtle: rgba(97, 236, 64, 0.20);
+
+  --semantic-shadow-ambient-subtle: var(--color-shadow-200);
+  --semantic-shadow-ambient-default: var(--color-shadow-300);
+  --semantic-shadow-elevation-default: var(--color-shadow-500);
+  --semantic-shadow-elevation-strong: var(--color-shadow-600);
+  --semantic-shadow-contact-default: var(--color-shadow-400);
+  --semantic-shadow-modal-default: var(--color-shadow-700);
+
+  /* DIMENSIONS */
+  --dimension-0: 0px;
+  --dimension-0-5: 2px;
+  --dimension-1: 4px;
+  --dimension-1-5: 6px;
+  --dimension-2: 8px;
+  --dimension-2-5: 10px;
+  --dimension-2-75: 11px;
+  --dimension-3: 12px;
+  --dimension-3-5: 14px;
+  --dimension-4: 16px;
+  --dimension-4-5: 18px;
+  --dimension-5: 20px;
+  --dimension-5-5: 22px;
+  --dimension-6: 24px;
+  --dimension-7: 28px;
+  --dimension-8: 32px;
+  --dimension-9: 36px;
+  --dimension-10: 40px;
+  --dimension-11: 44px;
+  --dimension-12: 48px;
+  --dimension-13: 52px;
+  --dimension-14: 56px;
+  --dimension-15: 60px;
+  --dimension-16: 64px;
+  --dimension-18: 72px;
+  --dimension-20: 80px;
+  --dimension-22: 88px;
+  --dimension-24: 96px;
+
+  /* LEGACY TAILWIND MAPPINGS */
+  --radius: 0.625rem;
+  --background: var(--semantic-bg-neutral-screen);
+  --foreground: var(--semantic-text-neutral-bold-default);
+  --card: var(--semantic-bg-neutral-elevated);
+  --card-foreground: var(--semantic-text-neutral-bold-default);
+  --popover: var(--semantic-bg-neutral-floating);
+  --popover-foreground: var(--semantic-text-neutral-bold-default);
+  --primary: var(--semantic-bg-brand-bold-default);
+  --primary-foreground: var(--semantic-text-neutral-bold-default);
+  --secondary: var(--semantic-bg-neutral-bold-default);
+  --secondary-foreground: var(--semantic-text-neutral-bold-default);
+  --muted: var(--semantic-bg-neutral-subtle-default);
+  --muted-foreground: var(--semantic-text-neutral-subtlest-default);
+  --accent: var(--semantic-bg-neutral-bold-default);
+  --accent-foreground: var(--semantic-text-neutral-bold-default);
+  --destructive: var(--semantic-bg-danger-warning-bold-default);
+  --border: var(--semantic-border-neutral-subtle-default);
+  --input: var(--semantic-border-neutral-subtle-default);
+  --ring: var(--semantic-border-neutral-bold-default);
+}
+
+/* DARK MODE SEMANTIC COLORS */
+.dark {
+  --semantic-bg-neutral-bold-default: #2F322D;
+  --semantic-bg-neutral-bold-hovered: #2F322D;
+  --semantic-bg-neutral-bold-pressed: #5A5E58;
+  --semantic-bg-neutral-bold-disabled: #5A5E58;
+
+  --semantic-bg-neutral-subtle-default: #161815;
+  --semantic-bg-neutral-subtle-hovered: #2F322D;
+  --semantic-bg-neutral-subtle-pressed: #5A5E58;
+  --semantic-bg-neutral-subtle-disabled: #5A5E58;
+
+  --semantic-bg-neutral-subtlest-default: #161815;
+  --semantic-bg-neutral-subtlest-hovered: #161815;
+  --semantic-bg-neutral-subtlest-pressed: #2F322D;
+  --semantic-bg-neutral-subtlest-disabled: #5A5E58;
+
+  --semantic-bg-neutral-screen: #0B0C0A;
+  --semantic-bg-neutral-elevated: #161815;
+  --semantic-bg-neutral-floating: #2F322D;
+  --semantic-bg-neutral-control: #2F322D;
+
+  --semantic-bg-brand-bold-default: #9EE770;
+  --semantic-bg-brand-bold-hovered: #81E143;
+  --semantic-bg-brand-bold-pressed: #66CF21;
+  --semantic-bg-brand-bold-disabled: #5A5E58;
+
+  --semantic-bg-brand-subtle-default: #163300;
+  --semantic-bg-brand-subtle-hovered: #224D00;
+  --semantic-bg-brand-subtle-pressed: #2D6601;
+  --semantic-bg-brand-subtle-disabled: #2F322D;
+
+  --semantic-bg-danger-subtle-default: #70151A;
+  --semantic-bg-danger-warning-bold-default: #FFD1D3;
+  --semantic-bg-danger-warning-bold-hover: #FFBDBF;
+  --semantic-bg-danger-warning-bold-pressed: #FFA8AE;
+
+  --semantic-bg-inverse-bold: #FFFFFF;
+
+  --semantic-text-neutral-bold-default: #FFFFFF;
+  --semantic-text-neutral-subtle-default: #D7D8D2;
+  --semantic-text-neutral-subtlest-default: #B7B9B4;
+  --semantic-text-disabled: #8A8D88;
+
+  --semantic-text-brand-bold-default: #9EE770;
+  --semantic-text-success-bold-default: #163300;
+  --semantic-text-warning-bold-default: #FFD400;
+  --semantic-text-danger-bold-default: #FFA8AE;
+  --semantic-text-danger-bold-disabled: #A82127;
+
+  --semantic-text-inverse-bold: #0B0C0A;
+
+  --semantic-icon-neutral-bold-default: #FFFFFF;
+  --semantic-icon-neutral-subtle-default: #B7B9B4;
+  --semantic-icon-neutral-disabled: #8A8D88;
+
+  --semantic-icon-brand-bold-default: #9EE770;
+  --semantic-icon-danger-bold-default: #FFA8AE;
+  --semantic-icon-danger-bold-disabled: #A82127;
+  --semantic-icon-danger-subtle: #CB2730;
+
+  --semantic-icon-inverse-bold: #0B0C0A;
+
+  --semantic-border-neutral-bold-default: #5A5E58;
+  --semantic-border-neutral-bold-hover: #2F322D;
+  --semantic-border-neutral-subtle-default: #5A5E58;
+  --semantic-border-neutral-subtle-hovered: #8A8D88;
+  --semantic-border-neutral-subtle-disabled: #2F322D;
+
+  --semantic-border-brand-subtle: #9EE770;
+  --semantic-border-brand-bold: #9EE770;
+
+  --semantic-border-danger-bold: #FFA8AE;
+  --semantic-border-danger-bold-disabled: #A82127;
+
+  --semantic-border-inverse: #161815;
+
+  --semantic-link-brand-bold-default: #9EE770;
+  --semantic-link-brand-bold-hovered: #81E143;
+  --semantic-link-brand-bold-visited: #66CF21;
+
+  --semantic-focus-brand-bold: #9EE770;
+
+  --semantic-overlay-neutral-bold: rgba(0, 0, 0, 0.60);
+  --semantic-overlay-neutral-subtle: rgba(0, 0, 0, 0.45);
+
+  --semantic-selection-neutral-subtle: rgba(0, 0, 0, 0.15);
+  --semantic-selection-brand-subtle: rgba(97, 236, 64, 0.30);
+
+  --semantic-shadow-ambient-subtle: var(--color-shadow-100);
+  --semantic-shadow-ambient-default: var(--color-shadow-200);
+  --semantic-shadow-elevation-default: var(--color-shadow-300);
+  --semantic-shadow-elevation-strong: var(--color-shadow-400);
+  --semantic-shadow-contact-default: var(--color-shadow-200);
+  --semantic-shadow-modal-default: var(--color-shadow-500);
+
+  /* LEGACY TAILWIND MAPPINGS */
+  --background: var(--semantic-bg-neutral-screen);
+  --foreground: var(--semantic-text-neutral-bold-default);
+  --card: var(--semantic-bg-neutral-elevated);
+  --card-foreground: var(--semantic-text-neutral-bold-default);
+  --popover: var(--semantic-bg-neutral-floating);
+  --popover-foreground: var(--semantic-text-neutral-bold-default);
+  --primary: var(--semantic-bg-brand-bold-default);
+  --primary-foreground: var(--semantic-text-neutral-bold-default);
+  --secondary: var(--semantic-bg-neutral-bold-default);
+  --secondary-foreground: var(--semantic-text-neutral-bold-default);
+  --muted: var(--semantic-bg-neutral-subtle-default);
+  --muted-foreground: var(--semantic-text-neutral-subtlest-default);
+  --accent: var(--semantic-bg-neutral-bold-default);
+  --accent-foreground: var(--semantic-text-neutral-bold-default);
+  --destructive: var(--semantic-bg-danger-warning-bold-default);
+  --border: var(--semantic-border-neutral-subtle-default);
+  --input: var(--semantic-border-neutral-subtle-default);
+  --ring: var(--semantic-border-neutral-bold-default);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -45,87 +379,6 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-}
-
-/* ==========================================================================
-   DESIGNER NOTE: Theme variables (light mode)
-   All colours use HEX so you can copy values from Figma and paste here.
-   Key variables:
-   — --background / --foreground: page background and text
-   — --primary / --primary-foreground: primary buttons, links, badges (e.g. Wise green)
-   — --secondary, --muted, --accent: secondary UI surfaces
-   — --border, --input, --ring: borders and focus rings
-   — --radius: default border radius (buttons, cards, inputs)
-   — --sidebar-*: sidebar-specific colours
-   ========================================================================== */
-:root {
-  --radius: 0.625rem;
-  --background: #ffffff;
-  --foreground: #252525;
-  --card: #ffffff;
-  --card-foreground: #252525;
-  --popover: #ffffff;
-  --popover-foreground: #252525;
-  --primary: #343434;
-  --primary-foreground: #fafafa;
-  --secondary: #f5f5f5;
-  --secondary-foreground: #343434;
-  --muted: #f5f5f5;
-  --muted-foreground: #737373;
-  --accent: #f5f5f5;
-  --accent-foreground: #343434;
-  --destructive: #dc2626;
-  --border: #e5e5e5;
-  --input: #e5e5e5;
-  --ring: #a3a3a3;
-  --chart-1: #e07c2e;
-  --chart-2: #2a9d8f;
-  --chart-3: #3d5a80;
-  --chart-4: #e9c46a;
-  --chart-5: #e76f51;
-  --sidebar: #fafafa;
-  --sidebar-foreground: #252525;
-  --sidebar-primary: #343434;
-  --sidebar-primary-foreground: #fafafa;
-  --sidebar-accent: #f5f5f5;
-  --sidebar-accent-foreground: #343434;
-  --sidebar-border: #e5e5e5;
-  --sidebar-ring: #a3a3a3;
-}
-
-/* DESIGNER: Dark mode — add class "dark" to <html> to enable; these vars override :root in dark mode */
-.dark {
-  --background: #252525;
-  --foreground: #fafafa;
-  --card: #343434;
-  --card-foreground: #fafafa;
-  --popover: #343434;
-  --popover-foreground: #fafafa;
-  --primary: #ebebeb;
-  --primary-foreground: #252525;
-  --secondary: #454545;
-  --secondary-foreground: #fafafa;
-  --muted: #454545;
-  --muted-foreground: #a3a3a3;
-  --accent: #454545;
-  --accent-foreground: #fafafa;
-  --destructive: #ef4444;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.15);
-  --ring: #737373;
-  --chart-1: #6366f1;
-  --chart-2: #2dd4bf;
-  --chart-3: #e9c46a;
-  --chart-4: #a78bfa;
-  --chart-5: #f87171;
-  --sidebar: #252525;
-  --sidebar-foreground: #fafafa;
-  --sidebar-primary: #6366f1;
-  --sidebar-primary-foreground: #fafafa;
-  --sidebar-accent: #454545;
-  --sidebar-accent-foreground: #fafafa;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #737373;
 }
 
 @layer base {

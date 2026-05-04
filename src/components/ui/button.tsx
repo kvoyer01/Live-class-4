@@ -5,20 +5,20 @@ import { Slot } from "radix-ui"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-[var(--semantic-focus-brand-bold)] aria-invalid:ring-[var(--semantic-bg-danger-warning-bold-default)]/20 dark:aria-invalid:ring-[var(--semantic-bg-danger-warning-bold-default)]/40 aria-invalid:border-[var(--semantic-bg-danger-warning-bold-default)]",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-[var(--semantic-bg-brand-bold-default)] text-[var(--semantic-text-neutral-bold-default)] hover:bg-[var(--semantic-bg-brand-bold-hovered)] active:bg-[var(--semantic-bg-brand-bold-pressed)] disabled:bg-[var(--semantic-bg-brand-bold-disabled)] disabled:text-[var(--semantic-text-disabled)]",
         destructive:
-          "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+          "bg-[var(--semantic-bg-danger-warning-bold-default)] text-white hover:bg-[var(--semantic-bg-danger-warning-bold-hover)] active:bg-[var(--semantic-bg-danger-warning-bold-pressed)] disabled:bg-[var(--semantic-text-danger-bold-disabled)] disabled:text-white focus-visible:ring-[var(--semantic-bg-danger-warning-bold-default)]/20 dark:focus-visible:ring-[var(--semantic-bg-danger-warning-bold-default)]/40",
         outline:
-          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "border border-[var(--semantic-border-neutral-subtle-default)] bg-[var(--semantic-bg-neutral-screen)] hover:bg-[var(--semantic-bg-neutral-subtle-default)] hover:border-[var(--semantic-border-neutral-subtle-hovered)] active:bg-[var(--semantic-bg-neutral-subtle-pressed)] disabled:border-[var(--semantic-border-neutral-subtle-disabled)] disabled:text-[var(--semantic-text-disabled)]",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-[var(--semantic-bg-neutral-bold-default)] text-[var(--semantic-text-neutral-bold-default)] hover:bg-[var(--semantic-bg-neutral-bold-hovered)] active:bg-[var(--semantic-bg-neutral-bold-pressed)] disabled:bg-[var(--semantic-bg-neutral-bold-disabled)] disabled:text-[var(--semantic-text-disabled)]",
         ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "text-primary underline-offset-4 hover:underline",
+          "hover:bg-[var(--semantic-bg-neutral-subtle-default)] hover:text-[var(--semantic-text-neutral-bold-default)] dark:hover:bg-[var(--semantic-bg-neutral-subtle-default)]/50",
+        link: "text-[var(--semantic-link-brand-bold-default)] underline-offset-4 hover:text-[var(--semantic-link-brand-bold-hovered)] visited:text-[var(--semantic-link-brand-bold-visited)]",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
